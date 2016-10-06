@@ -48,5 +48,5 @@ The `circle-menu` Vue2 component:
     };
 </script>
 
-<style src="../node_modules/css-circle-menu/css/circle-menu.css"></style>
+<style src="css-circle-menu/css/circle-menu.css"></style>
 ```
