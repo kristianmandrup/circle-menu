@@ -26,35 +26,21 @@ The `circle-menu` Vue2 component:
 
 <script>
     import 'css-circle-menu/js/dist/circleMenu.min.js';
-
-    // console.log('cssCircleMenu', cssCircleMenu);
-
+    import items from './items';
     export default {
-        // data: () => {
-        //     return {
-        //         items: [
-        //             {path: 'img/house.svg'},
-        //             {path: 'img/photo.svg'},
-        //             {path: 'img/pin.svg'},
-        //             {path: 'img/search.svg'},
-        //             {path: 'img/tools.svg'}
-        //         ]
-        //     };
-        // },
         props: {
-          items: {
-            type: Object,
-            default: function () {
-              return { message: 'hello' }
-            }
-          },
+            items: {
+                type: Array,
+                default: function () {
+                    return items;
+                }
+            }            
         },
-
         mounted: () => {
-            // console.log('circle-menu mounted');
             cssCircleMenu('.js-menu');
         }
     };
+
 </script>
 
 <style src="css-circle-menu/css/circle-menu.css"></style>

@@ -17,10 +17,7 @@
 
 <script>
     import 'css-circle-menu/js/dist/circleMenu.min.js';
-
-    // console.log('cssCircleMenu', cssCircleMenu);
     import items from './items';
-
     export default {
         props: {
             items: {
@@ -31,7 +28,6 @@
             }            
         },
         mounted: () => {
-            // console.log('READY');
             cssCircleMenu('.js-menu');
         }
     };
