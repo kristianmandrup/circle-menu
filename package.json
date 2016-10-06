@@ -16,6 +16,7 @@
   "author": "lakb248@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "css-circle-menu": "github:callmenick/css-circle-menu",
     "vue": "^2.0.1"
   },
   "devDependencies": {
@@ -53,6 +54,8 @@
     "vue-loader": "^9.5.1",
     "vue-style-loader": "^1.0.0",
     "webpack": "^2.1.0-beta.21",
+    "webpack-dev-middleware": "^1.8.1",
+    "webpack-hot-middleware": "^2.12.2",
     "webpack-dashboard": "^0.1.8",
     "webpack-dev-server": "^1.15.0",
     "webpack-merge": "^0.14.1"

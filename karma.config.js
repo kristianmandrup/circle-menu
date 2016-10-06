@@ -3,11 +3,11 @@ var merge = require('webpack-merge');
 delete baseConfig.entry;
 
 var webpackConfig = merge(baseConfig, {
-    vue: {
-        loaders: {
-            js: 'isparta'
-        }
-    }
+    // vue: {
+    //     loaders: {
+    //         js: 'isparta'
+    //     }
+    // }
 });
 
 module.exports = function(config) {
