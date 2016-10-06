@@ -45,3 +45,27 @@ The `circle-menu` Vue2 component:
 
 <style src="css-circle-menu/css/circle-menu.css"></style>
 ```
+
+## Usage
+
+Sample configuration with 5 items (like original demo):
+
+```html
+<div id="container">
+    <circle-menu ></circle-menu>
+</div>
+```
+
+Custom items:
+
+```html
+<div id="container">
+    <circle-menu :items="[{path: 'img/house.svg'}]"></circle-menu>
+</div>
+```
+
+## TODO
+
+Use the SASS files from the [circle-menu](http://callmenick.com/_development/css-circle-menu/ library to dynamically create the stylesheet 
+adjusted to the size and number of menu items!
+
