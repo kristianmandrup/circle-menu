@@ -19,19 +19,16 @@
     import 'css-circle-menu/js/dist/circleMenu.min.js';
 
     // console.log('cssCircleMenu', cssCircleMenu);
+    import items from './items';
 
     export default {
-        data: () => {
-            return {
-                text: 'Hello Vue-Component',
-                items: [
-                    {path: 'img/house.svg'},
-                    {path: 'img/photo.svg'},
-                    {path: 'img/pin.svg'},
-                    {path: 'img/search.svg'},
-                    // {path: 'img/tools.svg'}
-                ]
-            };
+        props: {
+            items: {
+                type: Array,
+                default: function () {
+                    return items;
+                }
+            }            
         },
         mounted: () => {
             // console.log('READY');
