@@ -1,7 +1,8 @@
-import util from './util';
+import util from '../util';
 
 export default function(ctx) {
-  let mq = util.mq(ctx); 
+  let mq = util.mq(ctx);
+  let mqDiam = util.mqDiam(ctx); 
 
   let obj = {
     __item: Object.assign({

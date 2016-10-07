@@ -1,4 +1,4 @@
-import util, { _90deg, translateMenuItem } from './util';
+import util, { _90deg, translateMenuItem } from '../util';
 
 export default function(ctx) {
   let mq = util.mq(ctx); 

@@ -1,16 +1,18 @@
-function span(ctx) {
-  let obj = {
-    display: block;
-    position: absolute;
-    height: $button-bar-height;
-    background: #fff;
-    border-radius: $button-bar-height/4;
+import { mq } from '../util';
 
+function span(ctx) {
+  let obj = Object. assign({
+      display: 'block',
+      position: 'absolute',
+      height: ctx.buttonBarHeight,
+      background: '#fff',
+      'border-radius': ctx.buttonBarHeight / 4
+    },
     mq({
       height: ctx.buttonBarHeight * 2,
       'border-radius': (ctx.buttonBarHeight * 2) / 4
     })
-  }
+  );
 
   return {
     span: obj,

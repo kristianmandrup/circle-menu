@@ -41,7 +41,7 @@ export default function(ctx) {
   mq({
       width: ctx.menuItemDiameter * 2,
       height: ctx.menuItemDiameter * 2,
-      'border-radius': $menu-item-radius * 2
+      'border-radius': ctx.menuItemRadius * 2
   }),
   inner(ctx)
   );

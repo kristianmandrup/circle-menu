@@ -1,18 +1,19 @@
+import util from '../util';
 
-export default function() {
-    // .c-circle-menu
-    let main = Object.assign(this.menuPosition, {
-      position: 'fixed',
-      'z-index': 1000,
-      width: this.menuItemDiameter,
-      height: this.menuItemDiameter,
-      'border-radius': this.menuItemRadius
-    }, this.mq({
-        width: mqDiam,
-        height: mqDiam,
-        'border-radius': mqDiam
-      })
-    )
+export default function(ctx) {
+  let mqDiam = util.mqDiam(ctx);
 
-  return obj; 
+  // .c-circle-menu
+  return Object.assign(ctx.menuPosition, {
+    position: 'fixed',
+    'z-index': 1000,
+    width: ctx.menuItemDiameter,
+    height: ctx.menuItemDiameter,
+    'border-radius': ctx.menuItemRadius
+  }, mq({
+      width: mqDiam,
+      height: mqDiam,
+      'border-radius': mqDiam
+    })
+  ); 
 }
