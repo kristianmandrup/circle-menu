@@ -4,8 +4,7 @@ export default function(ctx) {
   let mq = util.mq(ctx);
   let mqDiam = util.mqDiam(ctx); 
 
-  let obj = {
-    __item: Object.assign({
+  let obj = Object.assign({
       display: 'block',
       position: 'absolute',
       top: 0,
@@ -22,25 +21,24 @@ export default function(ctx) {
         height: mqDiam,
         'border-radius': mqDiam
     }))
-  }
 
   let itemFirst = {
-    '__item:nth-child(1)': Object.assign({
+    ':nth-child(1)': Object.assign({
       'transition-delay': ctx.finalDelay
     }, active)
   }
 
   let itemLast = {
-    [`__item:nth-child(${ctx.numItems})`]: {
+    [`:nth-child(${ctx.numItems})`]: {
       'transition-delay': '0s'
     },
-    'is-active': active
+    '.is-active': active
   };
 
   itemsMiddle = {};
   delay = ctx.xInitialDelay;
   for (let i =2; i <= (thi.numItems - 1); i++) {
-    itemsMiddle[`__item:nth-child(${i})`] = {
+    itemsMiddle[`:nth-child(${i})`] = {
       'transition-delay': delay
     };
     delay = delay - ctx.delayIncrement;

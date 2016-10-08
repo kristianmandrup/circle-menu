@@ -1,5 +1,4 @@
-import circleMenu from './circle-menu';
-import menuBtn from './menu-btn';
+import circleMenu from './menu';
 
 // <template>
 //     <nav class="menu js-menu">
@@ -18,11 +17,15 @@ import menuBtn from './menu-btn';
 //     </nav>
 // </template>
 
-export default {
-  menu: circleMenu,
-  item: circleMenu.item,
-  items: circleMenu.items,
-  link: circleMenu.link,
-  toggle: circleMenu.toggle,
-  mask: circleMenu.mask
+export default function(ctx) {
+  let menu = circleMenu(ctx);  
+
+  return {
+    menu: menu,
+    item: menu.item,
+    items: menu.items,
+    link: menu.link,
+    toggle: toggle,
+    mask: menu.mask
+  }
 }
