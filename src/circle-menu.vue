@@ -1,23 +1,24 @@
 <template>
-    <nav class="c-circle-menu js-menu">
-    <button class="c-circle-menu__toggle js-menu-toggle">
+    <nav class="menu js-menu">
+    <button class="toggle js-menu-toggle">
         <span>Toggle</span>
     </button>
-    <ul class="c-circle-menu__items">
-        <li class="c-circle-menu__item" v-for="item in items">
-        <a href="#" class="c-circle-menu__link">
+    <ul class="items">
+        <li class="item" v-for="item in items">
+        <a href="#" class="link">
             <img :src="item.path" alt="">
         </a>
         </li>
         <!-- more items here -->
     </ul>
-    <div class="c-circle-menu__mask js-menu-mask"></div>
+    <div class="mask js-menu-mask"></div>
     </nav>
 </template>
 
 <script>
   import 'css-circle-menu/js/dist/circleMenu.min.js';
-  import items from './items';
+  import items from './items'
+  import style from './style';
   // import color from 'rgb';
 
   export default {
@@ -120,7 +121,7 @@
         let diam = parseInt(this.menuItemRadius) * 2
         return `${diam}px`;
       }, 
-      cCircleMenu: cCircleMenu      
+      cCircleMenu: style(this)      
     },
     mounted: () => {
       cssCircleMenu('.js-menu');

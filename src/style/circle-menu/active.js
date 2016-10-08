@@ -14,6 +14,7 @@ export default function(ctx) {
   });
 
   let delay = ctx.initialDelay;
+  let angle = ctx.angle;
   for (let i=2; i <= (ctx.numItems - 1); i++) {
 
     isActive[i] = Object.assign({

@@ -24,14 +24,14 @@ function span(ctx) {
 function span2(ctx) {
   let obj = Object.assign({
       top: ctx.menuItemRadius - ctx.buttonBarHeight / 2,
-      left: ctx.buttonLrPadding,
-      right: ctx.buttonLrPadding,
+      left: ctx.buttonPadding,
+      right: ctx.buttonPadding,
       transition: 'background 0.3s'
     },
     mq({
       top: (ctx.menuItemRadius * 2) - (ctx.buttonBarHeight * 2) / 2,
-      left: ctx.buttonLrPadding * 2,
-      right: ctx.buttonLrPadding * 2
+      left: ctx.buttonPadding * 2,
+      right: ctx.buttonPadding * 2
     })
   )
 
@@ -48,7 +48,7 @@ function span2(ctx) {
       'transition-property': 'top, transform',
     },
     mq({
-      top: -(ctx.buttonBarHeight * 2) - (ctx.buttonBarSpacing * 2);
+      top: -(ctx.buttonBarHeight * 2) - (ctx.buttonBarSpacing * 2)
     })
   )
 
@@ -57,7 +57,7 @@ function span2(ctx) {
       'transition-property': 'bottom, transform'
     },
     mq({
-      bottom: -(ctx.buttonBarHeight * 2) - (ctx.buttonBarSpacing * 2);
+      bottom: -(ctx.buttonBarHeight * 2) - (ctx.buttonBarSpacing * 2)
     })
   );
 
