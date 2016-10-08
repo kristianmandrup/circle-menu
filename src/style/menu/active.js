@@ -1,7 +1,7 @@
-import util, { _90deg, translateMenuItem } from '../util';
+import util, { _90deg, translateMenuItem } from './util';
 
 export default function(ctx) {
-  let mq = util.mq(ctx); 
+  let mq = util.mq(ctx);
 
   let isActive = {};
 
@@ -19,7 +19,7 @@ export default function(ctx) {
 
     isActive[i] = Object.assign({
       'transition-delay': delay
-      }, 
+      },
       translateMenuItem(ctx.spreadRadius, ctx.angle, ''),
       mq(translateMenuItem(ctx.spreadRadius * 2, angle, '')
     ))
@@ -27,13 +27,13 @@ export default function(ctx) {
     delay = delay + delayIncrement;
     angle = angle + increment;
   }
-    
+
   isActive[ctx.numItems] = Object.assign({
       'transition-delay': ctx.finalDelay
     },
     translateMenuItem(ctx.spreadRadius, _90deg, 'last'),
     mq(translateMenuItem(ctx.spreadRadius * 2, _90deg, 'last'))
-  )                    
+  )
 
   return isActive;
 }

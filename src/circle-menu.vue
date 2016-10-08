@@ -16,6 +16,12 @@
 </template>
 
 <script>
+  import vMediaQuery from 'v-media-query';
+
+  // TODO: alternatively try moving this to index.js in root folder
+  import Vue from 'vue/dist/vue.js';
+  Vue.use(vMediaQuery.default)
+
   import 'css-circle-menu/js/dist/circleMenu.min.js';
   import items from './items'
   import style from './style';
@@ -26,7 +32,7 @@
       items: {
           type: Array,
           default: function () {
-              eturn items;
+              return items;
           }
       },
       themeColor: {
@@ -45,20 +51,20 @@
           type: String,
           default: function() {
             return '24px';
-          }        
+          }
       },
       delayIncrement: {
           type: String,
           default: function() {
             return '0.1s';
           }
-      },                
+      },
       position: {
           type: String,
           default: function() {
             return 'bottom-right';
           }
-      },              
+      },
       minHeight: {
           type: String,
           default: function() {
@@ -88,7 +94,7 @@
         default: function() {
           return '10px';
         }
-      }                                    
+      }
     },
     computed: {
       numItems: () => {
@@ -115,18 +121,22 @@
         return this.position.split('-').reduce((obj, value) => {
           obj[value] = '12px';
           return obj;
-        }, {}); 
+        }, {});
       },
       menuItemDiameter: () => {
         let diam = parseInt(this.menuItemRadius) * 2
         return `${diam}px`;
-      }, 
-      cCircleMenu: style(this)      
+      },
+      cCircleMenu: style(this)
     },
     mounted: () => {
       cssCircleMenu('.js-menu');
     }
   };
+
 </script>
 
-<style src="../node_modules/css-circle-menu/css/circle-menu.css"></style>
+<!-- TODO: Add CSS using CSS variables instead of the static SASS generated one below!! -->
+<!-- <style src="./menu.css" ></style> -->
+
+<style src="css-circle-menu/css/circle-menu.css"></style>

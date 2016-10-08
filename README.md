@@ -232,6 +232,8 @@ var value = String(styles.getPropertyValue('--primary-color')).trim();
 document.documentElement.style.setProperty('--primary-color', 'green');
 ```
 
+It might well make sense to develop the solution with a combination of these technologies. We can extend `src/menu.css` with CSS styles based on CSS variables, then add use bindings to computed properties for the more complex ones that require `for` loops, conditional logic etc.
+
 ## RXCSS
 
 The library [RxCSS](https://github.com/davidkpiano/RxCSS) makes it possible to combine [RxJS]() with [CSS variables]() to create reactive CSS variables and thus reactive CSS and illustrated in [this talk](https://www.youtube.com/watch?v=lTCukb6Zn3g)

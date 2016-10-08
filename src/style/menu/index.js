@@ -1,4 +1,4 @@
-import util from '../util';
+import util from './util';
 import item from './item';
 import items from './items';
 import link from './link';
@@ -17,7 +17,7 @@ function menu(ctx, mqDiam) {
       height: mqDiam,
       'border-radius': mqDiam
     })
-  ); 
+  );
 }
 
 export default function(ctx) {
@@ -30,5 +30,5 @@ export default function(ctx) {
     link: link(ctx),
     toggle: toggle(ctx),
     active: active(ctx)
-  }  
+  }
 }

@@ -1,0 +1,24 @@
+:root {
+  --deg-90: 1,5;
+  --num-items: 5;
+  --theme-color: rgb(255, 40, 60);
+
+  --spread-radius: 144;
+  --menu-item-radius: 24;
+  --menu-item-diameter: (var(--menu-item-radius) * 2);
+
+  --delay-increment: 0.1s;
+  --initial-delay: 0.1s;
+  --n-minus-1-initial-delay: ((var(--num-items) - 2) * var(--delay-increment));
+  --final-delay: ( (var(--num-items) - 1) * var(--delay-increment) );
+
+  --menu-position: 'bottom-right';
+
+  --mq-height: 480;
+  --mq-width: 480;
+
+  --button-bar-height: 4;
+  --button-bar-spacing: 4;
+  --button-lr-padding: 10;
+}
+

@@ -1,4 +1,4 @@
-import util from '../util';
+ˇimport util from './util';
 
 export default function(ctx) {
   let mq = util.mq(ctx);
@@ -48,4 +48,3 @@ export default function(ctx) {
   obj = Object.assign(obj, items);
   return obj; 
 }
-  
