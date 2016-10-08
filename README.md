@@ -115,6 +115,20 @@ The `circle-menu` Vue2 component:
 <style src="css-circle-menu/css/circle-menu.css"></style>
 ```
 
+## Architecture
+
+The component can be found in `circle-menu.vue` and consists of:
+- the view/template inside the `<template>` tag
+- the view model inside the `<script>` tag
+- the styling inside the `<style>` tag
+
+All the styling is imported as the `style` variable.
+
+```js
+import style from './style';
+```
+
+
 ## Usage
 
 Sample configuration with 5 items (like original demo):
@@ -132,6 +146,45 @@ Custom items:
     <circle-menu :items="[{path: 'img/house.svg'}]"></circle-menu>
 </div>
 ```
+
+### Custom styling
+
+```html
+<div id="container">
+    <circle-menu
+        :items="[{path: 'img/house.svg'}]">
+        :themeColor="blue"
+        :spreadRadius="126px"
+        :menuItemRadius="16px"
+
+        :buttonBarSpacing="4px"
+        :buttonPadding="8px"
+    </circle-menu>
+</div>
+```
+
+Investigate using numbers (for calculation):
+
+```js
+    :spreadRadius="126"
+    :menuItemRadius="16"
+```
+
+Invstigate using objects for scoping bindings and reducing number of bindings needed:
+
+Setting via `button` Object instead: `:button="{{button}}"`
+
+```js
+button: {
+    padding: '8px'
+    bar: {
+        spacing: '4px',
+        height: '4px'
+    }
+}
+```
+
+This should make it much more elegant! :)
 
 ## TODO
 
