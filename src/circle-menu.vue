@@ -27,6 +27,8 @@
   import style from './style';
   // import color from 'rgb';
 
+  let setProp = document.documentElement.style.setProperty;
+
   export default {
     props: {
       items: {
@@ -130,6 +132,23 @@
       cCircleMenu: style(this)
     },
     mounted: () => {
+      // set css variables here!
+      // TODO: set an Object with all CSS props then iterate key/values and set for each
+      let cssVarMap = {
+        'num-items': this.numItems
+        // ...
+      }
+      // or is it via Object.keys(cssVars) ??
+
+      // for (let prop in cssVars) {
+      //   setProp(`--${prop}`, cssVars[prop]);
+      // }
+
+      setProp('--num-items', this.numItems);
+      setProp('--final-delay', this.finalDelay);
+
+
+
       cssCircleMenu('.js-menu');
     }
   };
