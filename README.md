@@ -128,6 +128,14 @@ All the styling is imported as the `style` variable.
 import style from './style';
 ```
 
+The component uses *inline styling* which makes it much more powerful and useful.
+
+Eliminating CSS in favor of inline styles that are computed on the fly is a powerful approach, providing a number of benefits over traditional CSS:
+- Scoped styles without selectors
+- Avoids specificity conflicts
+- Source order independence
+- Dead code elimination
+- Highly expressive
 
 ## Usage
 
