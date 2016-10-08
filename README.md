@@ -189,7 +189,7 @@ Investigate using numbers (for calculation):
     :menuItemRadius="16"
 ```
 
-Invstigate using objects for scoping bindings and reducing number of bindings needed:
+Investigate using objects for scoping bindings and reducing number of bindings needed:
 
 Setting via `button` Object instead: `:button="{{button}}"`
 
@@ -204,6 +204,37 @@ button: {
 ```
 
 This should make it much more elegant! :)
+
+## CSS Variables
+
+[CSS variables](https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care) allows CSS to be expressed via variables that can be linked to Javascript.
+
+```css
+:root {
+  --main-color: #06c;
+}
+
+#foo h1 {
+  color: var(--main-color);
+}
+
+.foo {
+  --gap: 20;
+  margin-top: calc(var(--gap) * 1px);
+}
+```
+
+The CSS variables can be set (or get) from Javascript:
+
+```js
+var styles = getComputedStyle(document.documentElement);
+var value = String(styles.getPropertyValue('--primary-color')).trim();
+document.documentElement.style.setProperty('--primary-color', 'green');
+```
+
+## RXCSS
+
+The library [RxCSS](https://github.com/davidkpiano/RxCSS) makes it possible to combine [RxJS]() with [CSS variables]() to create reactive CSS variables and thus reactive CSS and illustrated in [this talk](https://www.youtube.com/watch?v=lTCukb6Zn3g)
 
 ## TODO
 
