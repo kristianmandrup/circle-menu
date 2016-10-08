@@ -171,6 +171,17 @@ Custom items:
 </div>
 ```
 
+`<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>`
+
+Please note that `:style` is a short hand for `v-bind:style`.
+
+```js
+data: {
+  activeColor: 'red',
+  fontSize: 30
+}
+```
+
 Investigate using numbers (for calculation):
 
 ```js
