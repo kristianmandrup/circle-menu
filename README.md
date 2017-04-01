@@ -1,5 +1,7 @@
 # circle-menu
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristianmandrup/circle-menu.svg)](https://greenkeeper.io/)
+
 > [circle-menu](http://callmenick.com/_development/css-circle-menu/) for Vue 2
 
 ## How it works
